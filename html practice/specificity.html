@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Specificity</title>
+        <link rel="icon" href="../images/favicon.avif">
+
+        <style>
+            .short {
+                background-color: rebeccapurple;
+            }
+            .long {
+                background-color: aquamarine;
+            }
+
+            h3 {
+                background-color: beige;
+            }
+            .div {
+                color: red;
+                width: 120px;
+            }
+            body {
+                color: blueviolet;
+            }
+            .one a {
+                color: inherit;
+            }
+            .two a {
+                color: initial;
+            }
+            .three a {
+                color: unset;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Cascade, specificity, Inheritance in CSS</h1>
+        <h2>Origin Types</h2>
+        <p>browsers have their own standard declarations. For example, h1 has it's set of default declarations.This is called USER AGENT STYLESHEETS</p>
+        <P>additionally, developers can have their own CSS declarations, it's called Author stylesheets</P>
+        <p>Lastly, Users might have their own CSS declarations- user stylesheets</p>
+        <br>
+        <p>Here is the list according to priorities. FROM most to least important</p>
+        <ul>
+            <li>Author Stylesheets</li>
+            <li>User stylesheets</li>
+            <li>User Agent Stylesheets</li>
+        </ul>
+
+        <p>In CSS class selector > type selector. For example:</p>
+
+        <h3 class="short">JUNE</h3>
+        <h3 class="short">JULY</h3>
+        <h3 class="long">AUGUST</h3>
+        <h3 class="long">SEPTEMBER</h3>
+
+        <h2>Inheritance in CSS</h2>
+        <P>there are some properties which will be affected by inheritance, while others don't. For example, every font property is affected by inheritance</P>
+
+        <div class="div">
+            <p>Hello</p>
+            <h3>wow</h3>
+        </div>
+        <p>As you can say div with class .div has changed font color to red, but this happened because font color is inheritant property. This will not happen if div's width was changed </p>
+
+        <ul>
+            <li class="one"> click this <a href="#">link</a></li>
+            <li class="two">click this <a href="#">link</a></li>
+            <li class="three">click this <a href="#">link</a></li>
+            <li class="four">click this <a href="#">link</a></li>
+        </ul>
+
+        <p>
+            Unset works like this. if it doesn't have an inheritant it will act as default. but if it's the kind of property that has inherit option, it will borrow inheritant style
+        </p>
+
+        <p> all:unset აი ამით შეგიძლია მართო ყველა ინჰერითენსი. მემკვიდრეობა ჩაურთო ან გამოურთო ყველას. unset აშორებს ყველა სტილს.</p>
+        <p>Inline styles are stronger than any other styles</p>
+        <p>there is only one thing stronger than inline style, it's called !important</p>
+            
+            
+
+
+
+
+    </body>
+
+</html>

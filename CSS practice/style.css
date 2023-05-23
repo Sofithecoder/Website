@@ -1,0 +1,45 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-top: 50px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 30px;
+  }
+  
+  #letter-input {
+    width: 50px;
+    margin-top: 10px;
+    padding: 5px;
+  }
+  
+  #generate-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #names-list {
+    margin-top: 30px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #names-list li {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  

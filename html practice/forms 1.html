@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Free Consultation</title>
+        <link rel="stylesheet" href="../CSS practice/first.css">
+
+    </head>
+    <body>
+        <h1>Register for free consultation</h1>
+        <form>
+            <label id="Good" for="FullName">Your Full Name</label> 
+            <br>
+            <input type="text" id="FullName" name="FullName">
+            <br>
+            <label for="Email">Your Email Address</label>
+            <br>
+            <input type="email" id="Email" name="Email">
+            <br>
+            <label for="phoneNumber">Please indicate your Phone number</label>
+            <br>
+            <input type="tel" Id="phoneNumbeer" name="phoneNumber" placeholder="ex: +995558503092" required >
+            <!--required ელემენტის გამოყენებით, ვაიძულებ ეს კონკრეტული გრაფა შეუვსებელი არ დატოვონ, თორემ არ გაიგზავნება შედეგი-->
+            <!--აი აქ placeholder ელემენტი რომ მაქვს გამოყენებული, ეგ არის იმის გამო, მაგალითი მივცე, რა ტიპის ტექსტი უნდა ეწეროს აქ-->
+            <br>
+            <!---Name ატრიბუტი გვადგება იმაში, რომ სერვერს სწორად გადავუგზავნოთ ინფორმაცია, ამასთან for & id ატრიბუტებში უნდა ეწეროს იგივე ინფორმაცია-->
+            <label for="Date">Please choose the date</label>
+            <br>
+            <input type="date" id="Date" name="Date">
+            <br>
+            <label for="time">Please indicate Desired Time</label>
+            <br>
+            <input type="time" id="time" name="time">
+            <br>
+            <label for="Taskamount">Please indicate number of required tasks</label>
+            <br>
+            <input type="Number" id="Taskamount" name="Taskamount">
+            <br>
+            <label for="Sofia">Please choose your freelancer</label>
+            <br>
+            <input type="image" src="../images/DSCF2806.jpg" width="100" height="100" id="Sofia" Name="Sofia">
+            <br>
+            <label for="urgency">How urgent is your need?</label>
+            <br>
+            <input type="range" id="urgency" name="urgency">
+            <br>
+            <label for="LinkedIn">Please indicate your LinkedIn profile</label>
+            <br>
+            <input type="url" id="LinkedIn" name="LinkedIn">
+            <br>
+            <label for="Needs">Please describe your needs here</label>
+            <br>
+            <textarea id="Needs" name="Needs" placeholder="not more than 200 words"></textarea>
+            <br>
+            <label for="Discovery">How did you discover me?</label>
+            <br>
+            <select id="Discovery" Name="Discovery">
+                <option>LinkedIn</option>
+                <option>Facebook</option>
+                <option>Google</option>
+            </select>
+            <br>
+            <br>
+            <input type="reset" id="reset" name="reset" value="Null Answers"> 
+        
+            <input type="submit" value="Send Invitation">
+        </form>
+
+    </body>
+</html>

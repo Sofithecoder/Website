@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div Practive</title>
+    <style>
+        #parent {
+            background-color: rgb(34, 52, 52);
+            width: 400px;
+            height: 500px;
+            overflow: scroll;
+            overflow-y: hidden;
+            /* ოვერფლოუ-ვაი იზამს იმას, რომ იმ შვილობილ ელემენტებს, რომლებიც ზომაში დიდია, ჰორიზონტალურ სქროლს მოუხსნის, ჩაატევს მშობელ ელემენტში */
+        }
+        #first {
+            background-color: aqua;
+            display: inline-block;
+            height: 100%;
+        
+        }
+        #second {
+            background-color:tomato ;
+            display: inline-block;
+            min-height: 80vh;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Div Practice</h1>
+    <p> vh -პროცენტებშია, ანუ 80vh რომ დაწერო, დაგიფარავს ბრაუზერის სიგრძის/სიგანის 80%ს. overflow- property ეწერება მშობელ ელემენტს და გვეუბნება, უნდა გადააფაროს თუ არა ისეთი შვილობილი ელემენტები, რომლებიც მასზე დიდია ზომაში. overflows აქვს ჰორიზონტალური და ვერტიკალური განზომილებები, რაც იმას ნიშნავს, რომ შეგიძლია ორივე მხარის ცალცალკე დარეგულირება</p>
+    <Div id="parent">
+        <div id="first">
+            Hello my friend!
+
+        </div>
+        <div id="second">
+            Hello my enemies too!
+
+        </div>
+
+    </Div>
+</body>
+</html>
+

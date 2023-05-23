@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Selectors part 2</title>
+        <link rel="icon" href="../images/favicon.avif">
+
+        <style>
+            button:hover {
+                background-color: aqua;
+            }
+            .hoverdiv:hover {
+                background-color: aqua;
+
+            }
+            .hoverdiv {
+                background-color: blue;
+            }
+
+            button:active {
+                background-color: green;
+            }
+            input:focus {
+                background-color: blueviolet;
+            }
+            ul li:nth-child(odd) {
+                background-color: aquamarine;
+            }
+
+            ul li:first-child {
+                background-color: rgb(26, 26, 4);
+            }
+            div p:first-of-type {
+                background-color: blue;
+            }
+            ::selection {
+                background-color: aqua;
+                /* სელექშენს თავად აქვს ორი წერტილი წინ, ანუ ორი :: სჭირდება */
+            }
+
+            input::placeholder {
+                color: brown;
+            }
+
+            ul::before {
+                content: "Before text";
+                color: blue;
+            }
+
+            ul::after {
+                content: "after text";
+                color: blue;
+            }
+            ul li::marker {
+                content:">";
+            }
+
+            h4 ~ span {
+                background-color: aquamarine;
+            }
+
+           
+           
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Selectors part 2- Pseudo classes & Pseudo elements</h1>
+        <h2>User action Pseudo classes</h2>
+        <p> ერთ-ერთი ცნობილი ფსევდო-კლასი არის hover. იწერება სელექტორთან ერთად, აი ასე:button:hover {} და როცა მაუსს მიიტან, შეგიძლია შეუცვალო ფერი, ფორმა და ა.შ. ნახეთ ქვედა მაგალითი. ეს მოქმედებს ნებისმიერ სელექტორზე. ანუ შეგიძლია ჩაწერო  .hoverdiv:hover.  </p>
+        <button>Click here</button>
+        <div class="hoverdiv">Hover div</div>
+        <p> Active property - ელემენტის გააქტიურების შემთხვევაში ზემოქმედებს css წესით. მაგალითად, თუ ღილაკი გვაქვს და დააჭერ, დაჭერის მერე შეგიძლია გაამწვანო. მაგალითი ქვემოთ </p>
+        <button>Click this</button>
+        <p>ასევე გვაქვს  focus property. როცა ელემენტს ფოკუსში მოვაქცევთ, მაგალითად ტექსტურ ველს დავაკლიკავთ, შიგნით დავაჭერთ ხელს, ის შეიცვლის ფერს, ფორმას და ა.შ. მაგალითი ქვემოთ</p>
+        <p> :placeholder ფროფერტის დახმარებით, შეგვიძლია გადასვტილოთ placeholder ტექსტი</p>
+        <input type="text" placeholder="გადამსტილე აბა">
+        <p>რა განსხვავებაა focus & active შორის? active ფსევდო კლასი ირჩევს იმ ელემენტებს, რომლებზეც ხელი იმ მომენტში გაქვს დაჭერილი. მაგრამ focused ირჩევს იმეებს, რომელსაც ხელი ბოლოს დააჭირე. active ქრება თუ ხელს აუშვებ, focus იქამდე არ ქრება, სანამ რამე სხვას არ დააჭერ.</p>
+        <h2>nth-child() pseudo classes</h2>
+        <p> nth-child() ფრჩხილებში ვწერთ რიგით მერამდენე ელემენტი გვინდა გადავსტილოთ. თუ ჩავწერთ 3-ს გადაისტილება მესამე ეელემენტი. ასევე აქვს ეს ღირებულებები: nth-child(even) გადასტილავს მხოლოდ ლუწ რიგში მდგომ შვილებს, მეორეს, მეოთხეს და ა.შ. nth-child(odd) გადასტილავს მხოლოდ კენტ რიგობით შვილებს</p>
+        <p> ასევე არისებობს first-child და last child ფსევდო კლასებიც, რომელიც პირველ და ბოლო შვილს გადასტილავს. ul li:first-child {}</p>
+        <br>
+        <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        </ul>
+        <br>
+
+        <p>თუ ისეთი ელემენტი გვაქვს მითითებული first-child ში, რაც მშობლის პირველი შვილი არაა, არ გადაისტილება. ამისთვის საჭიროა ჩავსვათ first of type ფროფერთი. div p:first-of-type {background-color: blue;} აი ამ მაგალითში დივის პირველი შვილი არ არის პარაგრაფი და first child პარაგრაფს არ გადასტილავდა, მაგრამ first of type-მა გადასტილა. ქვემოთ იხილეთ მაგალითი. </p>
+        <p> ამ პრინციპით მუშაობს nth-of-type(), last-of-type(), first-of-type()</p>
+        <p>only-of-type გადასტილავდა პარაგრაფს მხოლოდ იმ შემთხვევაში, თუ მშობელში მხოლოდ ერთი პარაგრაფი იქნებოდა</p>
+        <div>
+            <h1>Heading</h1>
+            <p>Paragraph1</p>
+            <p>Paragraph2</p>
+        </div>
+
+        <h2>Pseudo Elements</h2>
+        <p>Selection pseudo element -გვეხმარება გადავსტილოთ მონიშნული ტექსტი. ქვემოთ მაგალითი </p>
+        <p>ასევე გვაქვს first-letter, first-line რომელიც პირველ ასოს ან პირველ ხაზს გადაგვასტილინებს</p>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quis libero corporis, error neque minima commodi similique, quam accusantium saepe sapiente assumenda magnam ad dolore illo sequi. Animi, veritatis non.
+        Ipsa explicabo ullam culpa eos nulla maiores vel ut deserunt fugiat expedita, optio facilis quaerat officiis cum incidunt odio reiciendis repellat vero nisi suscipit omnis, aut aliquam praesentium. Incidunt, qui!
+        Repellat dolorem, autem cum non exercitationem, libero consequatur a esse id doloremque facere aperiam corrupti beatae aliquam maiores consectetur hic accusantium! Animi et omnis quod minima, nulla ipsam suscipit enim.
+        Iste nesciunt ea tempora laudantium est suscipit. Aspernatur excepturi nesciunt sed et explicabo voluptas, alias veniam iure exercitationem nemo fugiat vero placeat at assumenda, commodi ducimus, quis laboriosam aut hic.
+        Esse veniam at mollitia dolore sit voluptatem laborum laudantium in assumenda incidunt harum illum omnis ex, quod voluptates odit beatae facilis aperiam odio itaque nam reprehenderit blanditiis distinctio? Repellendus, accusamus.
+        Doloremque unde a omnis repudiandae facilis, nemo expedita autem dolorum consequatur necessitatibus. Fugit nihil est tempore, harum tempora deserunt a, ipsum nam placeat sed excepturi earum nostrum repudiandae delectus itaque!
+        Non vel qui laboriosam laborum reprehenderit fuga totam harum sunt reiciendis, suscipit maiores doloribus nulla nobis perspiciatis nihil provident atque animi ad neque esse consequuntur. Quis tenetur repudiandae reprehenderit sapiente?
+        Voluptates veritatis corporis nobis et accusamus velit quos voluptas nostrum pariatur, maxime nisi cupiditate ullam magnam nemo cumque, officia ducimus perspiciatis, aspernatur vel suscipit doloremque facere autem totam placeat! Nostrum?
+        Voluptate sequi veritatis earum consectetur architecto porro incidunt cumque! Voluptas at mollitia, tenetur sint, officiis quo repellendus commodi ex aliquid velit beatae, corrupti esse qui maxime odio fuga eum laudantium.
+        Provident unde voluptatem dolore necessitatibus perspiciatis corrupti voluptates deserunt omnis saepe assumenda illo aut illum aspernatur doloremque, est ex optio nulla totam tempora, nesciunt consequuntur a officia quaerat? Sint, hic?</p>
+        <p>შეგვიძლია ლისტის ბულეთფოინთებიც გადავსტილოთ, და წერტილების ნაცვლად სხვა ნებისმიერი სიმბოლო ჩავუსვათ. მე ზედა მაგალითში ფოტოს ჩავსვამ. ესეც ფორმულა: ul li::marker {}</p>
+        
+        
+        
+        <p>Before და after ფსევდო ელემენტები ქმნიან შვილობილ ელემენტებს ჩვენს მიერ არჩეულ სხვა ელემენტებში. საკმაოდ ხშირად გამოიყენება. მაგალითად სიის დასაწყისში ტექსტის ჩასაწერად. Before ქმნის შვილ ელემენტს ჩვენს მიერ არჩეული ელემენტის დასაწყისში, ხოლო  after ბოლოში. მაგალითად ესე იწერება: ul::before {content:"vau";}. Before/after ში შეგვიძლია კონტენტში ფოტოსურათი ან სხვა რაიმეც ჩავსვათ. მე ჩავსვი > -ეს სიმბოლო.</p>
+        <h3>დავიმახსოვრო ეს სელექტორებზე!!</h3>
+        <p> სელექტორებს შორის გამოტოვება, ნიშნავს ყველა შთამომავლის გადასტილვას div span ასე რომ წერია, ვეუბნები, რომ დივის ყველა შთამომავალი სპანი გადაისტილოსო</p>
+        <p> > მეტობის ნიშანი ნიშნავს ყველა უშუალო შვილს</p>
+        <p>, მძიმე ნიშნავს and/და</p>
+        <p>~ ყველა ქვედა მეზობელი (მარტო დედმამიშვილებზე ვრცელდება/ შთამომავლობაზე არა)</p>
+        <p>+ მხოლოდ უშუალო ქვედა მეზობელი (მარტო დედმამიშვილებზე ვრცელდება/ შთამომავლობაზე არა)</p>
+
+        <h4>Vau</h4>
+        <p>yeaaa</p>
+        <div>OK
+            <span>SPANUKA</span>
+            <p>yestoo</p>
+        </div>
+        <span>go girl</span>
+
+    </body>
+
+</html>

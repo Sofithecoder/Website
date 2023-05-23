@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Normal Flow</title>
+        <link rel="icon" href="../images/favicon.avif">
+        <style>
+            div {
+                background-color: aquamarine;
+                border: 2px solid black;
+                margin: 10px;
+                padding: 10px;
+                width: 500px;
+                position: relative;
+                
+            }
+            #positioned {
+                background-color: beige;
+                position: absolute;
+                top: 90px;
+                left: 50px;
+                z-index: 1;
+            }
+            #parent {
+                position: relative;
+                float: right;
+                width: 400px;
+                
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <h1>Normal Flow, Position, Float in HTML</h1>
+        <p>Display property has one important value called "none". If you assign display "none" value to the element it will cancel the element completely. Display none is frequently used when you want to temporarily take away the element from the website</p>
+        <p>To hide the element temporarily but still keep the space it is taking on the browser screen you can use: Visibility=hidden. </p>
+        <p>Image is the only property which can change widht and height without being inline-block element</p>
+        <h2>Positioning</h2>
+        <p>Position=static ეს არის ნორმალური დინების ნაწილი, ყველა ელემენტი მისდევს თავის თანმიმდევრობას. static elements don't count as POSITIONED elements</p>
+        <p>Position= relative გაძლევს საშუალებას top, bottom, left, right property ს დახმარებით მართო ელემენტის პოზიცია. Position relative ელემენტები ათვლას იწყებენ თავიანთი სტანდარტული ადგილიდან. თუ გინდა რომ ელემენტი დატოვო თავის ბუნებრივ ადგილას და ამ ადგილიდან გადათვალო სად დარენდერდეს ის,ეს ფროფერთი გამოგადგება. ანუ ამ შემთხვევაში ელემენტები არ ხტებიან ნორმალური დინებიდან</p>
+        <h3> Position Absolute</h3>
+        <p>Position absolute ელემენტები ვარდებიან ნორმალური დინებიდან და პოზიციონირდებიან vp ანუ ბრაუზერის ეკრანის მიხედვით. Top, left, bottom, right, property-ებს რომ გაუწერ მაგას დაემორჩილება და ბრაუზერიდან დაიწყებს გადათვლას</p>
+        <p> ისეთ html ელემენტებს, რომლებსაც position-ში static არ უწერიათ, ეწოდებათ positioned ელემენტები</p>
+        <p>z-index აკონტროლებს positioned ელემენტებიდან რომელი დარენდერდეს პირველი და რომელი მეათე, რაც უფრო მაღალი აქვს ზეტ ინდექსი, მით უფრო პირველი რენდერდება</p>
+        <h3>position fixed გაყინავს ელემეტს და სქროლე რამდენიც გინდა სულ ერთადგილას იქნება. Normal flow-დან ხტებიან. ესეც ბრაუზერთან მიმართებაში ითვლის და სჭირდება top, left, right, bottom properties. </h3>
+        <p>position=sticky აბრუნებს ელემენტს ნორმალურ დინებაში, მაგრამ სქროლვისას ერთი და იმავე მანძილით შორდება ბრაუზერის ზედა, ქვედა ან გვერდითა ნაწილებს.</p>
+
+        <p> Position relative ელემენტს შეუძლია ყავდეს position absolute შვილობილი ელემენტი და არა ბრაუზერის საზღვრებიდან არამედ მშობლის საზღვრებიდან დარენდერდება. მარჯვნივ რო ელემენტია, ეგრეა გაწერილი</p>
+        <p>Float ფროფერთის დახმარებით შეგვიძლია რომელიმე მხარეს გადავაგდოთ ელემენტი. მარჯვნივ, მარცხნივ და ა.შ. float არ არის ხშირად გამოყენებადი ფროფერთი.</p>
+
+
+
+
+        <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tenetur, ratione quis saepe omnis soluta, enim amet ipsa culpa molestiae dolorum fugiat alias laboriosam voluptatum, iure cum perferendis doloribus aperiam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus ad ipsum quibusdam aliquid? Commodi, minima tempore ipsam aliquam doloribus officia? Nulla sunt repellat similique cum! Maxime incidunt aliquid laborum quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quis dolor libero, maxime blanditiis explicabo assumenda, unde laborum laboriosam molestiae quisquam iure sequi labore officia reprehenderit corporis distinctio facilis et.</div>
+        <div id="parent">
+        <div id="positioned">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel facere laborum tempore fugiat blanditiis recusandae dolorum corrupti id eum reiciendis impedit excepturi veniam dolorem magnam odit, officiis minima repellendus optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus necessitatibus deserunt nam officiis! Laborum, tempora pariatur doloribus consequatur, nam, ad officia odio commodi dolorum aliquid deleniti accusamus dolore vel debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet vero repudiandae, ex quia magnam quis aliquam? Magni dolorem, possimus, laudantium deleniti itaque sequi perspiciatis quos facere libero officiis qui ipsam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, dignissimos nostrum, vel itaque magnam quam animi atque iusto, ut necessitatibus veniam error? Sint ad molestias sit cum deleniti in reprehenderit.</div>
+        </div>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem aut temporibus nemo excepturi ab dignissimos esse sequi. Ullam necessitatibus quo vitae architecto nesciunt nobis. Neque officia corporis dicta illum deserunt? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis ad quibusdam eos accusamus assumenda magni, ab rerum a excepturi, adipisci ratione, tempora nihil est! Possimus praesentium asperiores quod voluptates odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex explicabo, voluptatum asperiores voluptate nobis eaque, aperiam blanditiis suscipit praesentium libero atque aliquid deleniti optio, mollitia ipsum odio necessitatibus delectus dignissimos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem possimus iste provident eum excepturi, inventore quisquam quam aspernatur. Iure inventore ducimus eum quibusdam tempore placeat incidunt reiciendis nesciunt excepturi illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro deleniti impedit possimus quibusdam, voluptatem ex et aliquid, similique animi voluptatum quisquam consectetur maiores magni exercitationem sit eos! Consequuntur, nam iure. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nisi error non eius. Error, eius. Dicta animi, recusandae soluta quisquam voluptatem eligendi officiis ratione. Nihil deleniti quidem inventore optio similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic reprehenderit iste officiis, sunt repudiandae veritatis dignissimos vitae doloribus nobis non recusandae laboriosam ipsam neque aliquid odio ut est labore voluptates. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero commodi ratione quisquam necessitatibus. Impedit asperiores ipsam nobis unde officiis totam! Error, voluptates nemo! Debitis minus officia, aperiam iure hic animi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, facilis sunt consequatur atque voluptatem accusantium voluptas quidem doloremque nemo hic quam accusamus dolorum eligendi itaque enim repellendus suscipit quae saepe.</div>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum quidem tempora vitae facere nostrum aperiam commodi, quaerat nam, iure, exercitationem vel velit. Exercitationem excepturi illo tempore aut consectetur reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga mollitia quam laudantium aut aperiam iure? Illum consectetur labore vel cumque fugiat praesentium esse repudiandae vitae eos earum, perspiciatis odit et! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam odit dolor nisi, quis corporis quasi fugit nobis voluptate delectus, tenetur facilis beatae repudiandae eum qui voluptatum ratione recusandae libero cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate tenetur officiis ducimus adipisci sed. Nesciunt, voluptatibus? Assumenda, vel? Suscipit asperiores deserunt tenetur veritatis aut eligendi omnis sint quas mollitia sit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam natus suscipit reprehenderit, debitis adipisci ea non velit provident earum molestiae quae vel. Porro iure asperiores omnis eveniet corrupti repudiandae ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officiis dolore placeat ipsa molestias tempore nobis temporibus necessitatibus optio voluptas, quidem ullam voluptates, quos modi culpa quaerat dicta, libero ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis molestiae non dolores magni, nisi vero modi tempore. At dolorum, repellat atque blanditiis nisi aspernatur, quis recusandae dignissimos doloremque cum fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti totam iste voluptatibus blanditiis doloribus dolorem. Tempora deserunt excepturi magnam eos facilis provident doloribus accusantium delectus dicta, totam nulla? Voluptatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur debitis dignissimos corporis deleniti eligendi adipisci molestias officia in delectus voluptas veniam necessitatibus, impedit ab, exercitationem mollitia suscipit animi odit reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quo voluptates ipsum suscipit rem reiciendis eius, quisquam ratione quia odio asperiores doloribus id consectetur! Enim laudantium minima voluptatem voluptatibus consectetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sint tenetur quo maiores voluptatum corrupti atque, doloremque ullam nisi possimus reiciendis quasi. Porro ipsum vero corporis eligendi expedita voluptatum blanditiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro deserunt delectus repellat atque eveniet! Nam dignissimos debitis autem. Amet facere iusto commodi perferendis nostrum in sunt sit qui nisi non.</div>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,31 @@
+<div id="container" onclick= 'doSomething()'>
+    აბა დამაკლიკე
+</div>
+<script>
+    function doSomething(event) { console.log('container is clicked', event)
+    
+    } 
+    //ივენთი რომ გავატანე, ამით მოვთხოვე დაჭერის შესახებ დამატებითი პარამეტრები
+    // კონსოლმა დამიწერა container is clicked, რამდენჯერაც დავაჭირე იმდენი დაითავალა
+    // ნებისმიერ ეიჩთიემელ ელემენტს გააჩნია ატრიბუტი onclick როელშიც შეგილია გაუშვა ჯავასკრიპტის კოდი
+
+    // აქ ჩვენ ჯავასკრიპტის ფუნქცია გავუშვით html ელემენტის ატრიბუტიდან onclick-ით
+    // მარა შეგვილია, ჯავასკრიპტშივე გავუშვათ ფუნქცია სრულიად clicklistener-ით
+
+    // მაგალიტად
+
+    const container = document.querySelector('#container')
+    // query სელექტორით ეს დივი შემოვიტანე ჯავასკრიპტში
+    container.addEventListener('click', doSomething)
+    // ფუნქცია სტრინგში არ ისმება
+    // html ობიექტის(კონტეინერის)ელემენტზე დავამატე ივენთის მომსმენი, პირველს ივენთი გადავეცი, მეორეს ფუნქცია
+    // შედეგი იგივე: რამდენჯერაც დააკლიკავ გაეშვება ფუნქცია
+
+    // ასევე არსებობს removeeventlistener
+
+    //container.removeEventListener('clock', doSomething)
+    container.addEventListener('click', doSomething)
+ 
+
+</script> 
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>Frequently used CSS properties</title>
+        <link rel="icon" href="../images/favicon.avif">
+
+
+        <style>
+            body {
+                font-family: 'Mynerve', cursive;
+            }
+
+           /* li {
+                list-style: url(../images/favicon.avif);
+            } */
+        </style>
+        
+    </head>
+    <body>
+        <h1> Frequently used CSS properties</h1>
+        <h2>CSS fonts</h2>
+        <p>Font-style: აქვს ორი გამოყენებადი მნიშვნელობა normal & italic. </p>
+        <p>Font weight property ფონტის სისქეს ცვლის. თავისი რიცხვობრივი საზომები აქვს, მაგალითად bold=700. Lighter & bolder ფროფერთიები, შვილობილ ელემენტებს ეუბნებიან მშობლებზე სქელები ან თხელები იყავითო. თუ მშობელი მაგალითად 500 ია სისქე, bolder=700 , lighter=100. ამას თავისი სპეციალური წესები აქვს, ცხრილი არსებობს.</p>
+        <p style="font-stretch: ultra-expanded;"> Font-sretch გამოიყენება სიმბოლოებს შორის spacing ის საკონტროლებლად</p>
+        <p style="line-height: 3em;" > ტექსტის თითოეული ხაზის ზომა კონტროლდება line hight-ით. ამიტომ არის ამ ტექსტის ხაზებს შორის დიდი დაშორება. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni cumque aliquam dicta inventore adipisci sapiente temporibus, neque, qui numquam aliquid impedit sequi officiis exercitationem quis dolorem similique consequatur nesciunt praesentium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quos libero, autem officia veniam voluptatem est accusamus porro architecto repellat! Labore temporibus molestias non inventore commodi dolorum consequatur aliquam dolorem.</p>
+        <p>Font-family-ზეა დამოკიდებული ფონტის სტილი. font-family ში შეიძლება იყოს მითითებული არა ერთი, არამედ რამდენიმე ფონტი. ბრაუზერები ზოგჯერ ფონტებს არ ტვირთავენ, ამიტომ ჯობს, რომ რამდენიმე ფონტი გადავცეთ</p>
+        <br>
+        <h3>როგორ დავაინსტალიროთ ვებსაიტზე ფონტი?</h3>
+        <p>ვებსაიტზე ფონტის დასაინსტალირებლად გვაქვს ორი გზა. ერთი არის, რომ პროექტის ფოლდერში ჩავიწეროთ ფონტის ფაილი და იქიდან დავლინკოთ CSS-ში ეს ფაილი. მეორე გზა არის, რომ GOOGLE გამოვიყენოთ და მასზე დაჰოსტილი ფონტები დავაიმპორტოთ CSS ში. </p>
+        <p>როგორ შემოვიტანოთ გუგლიდან ახალი ფონტი? ფონტი ავირჩიოთ და head სექციაში სულ ზემოთ ჩავსვათ გუგლის მიერ მოწოდებული ლინკები. CSS RULE შიც გუგლის მიერ მითითებული კოდი ჩავსვათ. </p>
+        <H2>text manipulation in CSS</H2>
+        <p>text-align ტექსტის განლაგებას განსაზღვრავს. როგორც word-ში alignment. Text-align left, right, justify(გაზეთებში როა, იდეალური ჩამომწკრივება ეგაა)</p>
+        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus harum totam, repellendus officia corporis enim perspiciatis? Omnis a nemo adipisci facere tempore. Necessitatibus laudantium consequatur praesentium vero rerum. Dolorem, cum?</p>
+        <h3 style="text-decoration-style:solid;">text-decoration propery არის შორთჰენდი რამდენიმე სიესეს ფროფერთისა. ესარის: color, line, style, thickness</h3>
+        <p style="text-transform:capitalize"> text-transform გვეხმარება არსებული ტექსტი uppercase or lowercase ად ვაქციოთ. ან მისი კაპიტალიზაცია მოვახდინოთ, ანუ ავწიოთ აფერქეისში მხოლოდ პირველი ასოები.</p>
+        <br>
+        <p style="text-indent: 30%;">Text-indent ის დახმარებით შეგვიძლია მასიური ტექსტის პირველი ხაზის ინდენტაცია, ანუ დაშორება, ახალ აბზაცად ქცევა. ისე, როგორც ეს ამ მაგალითშია მოცემული. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptatum ullam aspernatur itaque. Rerum reprehenderit repudiandae voluptas, enim officia sapiente at eveniet alias necessitatibus assumenda. Amet aspernatur natus ipsam labore?</p>
+        <p>white-space property აკონტროლებს გამოტოვებებს და enter ებს. </p>
+        <p style="letter-spacing: 3px;">Letter-spacing ში შეგიძლია მიუთითო ნებისმიერი ზომა და სიმბოლოებს შორის შესაბამისად გაიზრდება ადგილები. ასევე არის word spacing.</p>
+        <p> Word breaking გამოიყენება იმის საკონტროლებლად თუ რა უნდა ქნას css მა, როცა სიტყვის გატეხვა უწევს რადგან აღარ ეტევა ერთ ხაზზე. normal-ბრძანება სიტყვას შუაზე არ ტეხავს, ხოლო break-all ნებისმიერ ორ ასოს შორის ტეხავს სიტყვას.</p>
+        <br>
+        <p> List-style property გვეხმარება გადავსტილოთ ლისტის ბულეთფოინთები, შევუცვალოთ ფორმა ან ჩავსვათ შიგნით ფოტო. მაგალითი: li {   list-style: url(../images/favicon.avif);.</p>
+        <p> List-style ს აქვს georgian მნიშვნელობა, რომელიც ქართული ანბანით გადანომრავს სიას. მაგალითი ქვემოთ.</p>
+        <ul style="list-style: georgian;">
+        <li>me</li>
+        <li>you</li>
+        <li>sun</li>
+        <li>moon</li>
+        <li>light</li>
+        </ul>
+
+        <br>
+        <h3>link pseudo classes</h3>
+        <p> a:link მონიშნავს და გადაგვისტილავს მხოლოდ ისეთ ლინკებს, რომლებზეც მომხმარებლებს ჯერ არ დაუკლიკავთ. a:visited მონიშნავს დაკლიკულ ლინკებს.  </p>
+        <p style="cursor: grab;"> Cursor propery-ს რომელ ელემენტსაც გაუწერ, ამ ელემენტზე მაუსის გადატარების შემთხვევაში მაუსის ფორმა შეიცვლება. ამ ელემენტზე რომ ვჰოვერდებით, ხელის მოკიდების მაუსი უჩნდება </p>
+
+        <p style="opacity: 0.44;"> Opacity property გვაძლევს საშუალებას ელემენტებს შევუცვალოთ გამჭვირვალობა, მაგალითად 0.33 ნიშნავს 33%ს, 1 ნიშნავს რომ არ არის გამჭვირვალე და 0 ნიშნავს სრულიად გამჭვირვალეს. ეს ელემენტი გამჭვირვალეა</p>
+    </body>
+
+</html>

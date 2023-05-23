@@ -1,0 +1,46 @@
+<div class="container">
+    <p id="aboutUs">About us texts</p>
+    <p>Portfolio texts</p>
+</div>
+
+<script>
+    const aboutUs = document.querySelector('.container p')
+    // დოკუმენტ ობიექტს გააჩნია ქუერისელექტორ მეთოდი, სადაც შეგიძლია არგუმენტად გადასცე სელექტორი
+    // სტრინგში შეგიძლია ნებისმიერი სირთულის css selector ჩაწერო
+    // aboutUs დაგიბრუნებს პირველივე პარაგრაფს შედეგში რაც შეხვდება
+    const texts = document.querySelectorAll ('.container p')
+    // ეს სელექტორი დააბრუნებს კონტეინერის ყველა შვილ პარაგრაფს ერეიში
+    console.log(aboutUs);
+    console.log(texts)
+    console.log(texts[0])
+
+
+    // შეგვიძლია html ელემენტები დავასელექტოთ ატრიბუტებით(კლასი, აიდი, ნეიმი)
+    // document.getelement/getelements პირველი აბრუნებს ერთ ელემენტს, მეორე მასივს
+
+    const aboutwe = document.getElementById('aboutUs')
+    // ეს დალოგავს ყველა პარაგრაფს აიდით aboutUs, ამშემთხვევაში პირველ ელემენტს
+    console.log(aboutwe) // დალოგა პირველი ელემენტი
+    const containerz = document.getElementsByClassName('container')
+    console.log(containerz) // დალოგა ერთი ელემენტი ერეიში- კონტეინერის კლასი ერთ დივს აქ
+    const paragraphs = document.getElementsByTagName('div')
+    console.log(paragraphs) // დალოგა ერეიში დივი
+
+    // atributes
+
+    console.log(aboutUs.getAttribute('id')); // ეს მოგვცემს id სახელს aboutUs
+    // შეგვიძლია ატრიბუტის სახელის შეცვლა მაგალითად 
+    aboutUs.setAttribute('id','newid') // id გახდა newid ანუ, შეიცვალა 
+    // ანუ აქ კონკრეტულ ატრიბუტში ჩავწერეთ ახალი ინფორმაცია
+
+
+    // სანათესაო
+    const container =document.querySelector('container')
+    console.log(container.children); // გამოიტანს კონტეინერის შვილებს - პარაგრაფებს
+    console.log(container.parentElement)
+//გამოიტანს კონტეინერ კლასის მქონე მშობელ ელემენტს ანუ-body ელემენტს
+
+
+</script>
+
+<!--html დოკუმენტის კონტენტი შეგიძლია შეცვალო ჯავასკრიპტით-->

@@ -1,0 +1,22 @@
+<input type="text" id="userName" />
+<span class="error"></span>
+<script>
+function onUsernameChange(e) {
+    if(e.target.value == 'სოფი') {
+    error.innerHTML = 'ასეთი მომხმარებელი უკვე არსებობს'
+    error.style.color = 'red'
+    }
+    else {
+       error.innerHTML= 'მონაცემი შენახულია'
+    }
+}
+
+// target გვაძლევს იმ ელემენტს, რომელმაც ივენთი გამოიწვია
+// value არის ის, რაშიც input ელემენტი ინახავს ინფორმაციას
+
+    const userName = document.getElementById('userName')
+    const error = document.querySelector('.error')
+    userName.addEventListener('input', onUsernameChange)
+    //input ეშვება ყოველთვის, როცა იცვლება ინფორმაცია ინფუთში
+    // და მეორე გადავეცი ფუნქცია
+</script>

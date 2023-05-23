@@ -1,0 +1,59 @@
+body {
+    background-color: beige;
+    font-family: Arial, sans-serif;
+    
+}
+
+h1 {
+    text-align: center;
+    color: brown;
+    margin: 20px 0;
+}
+
+form {
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    color: brown;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: brown;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: maroon;
+}
+#Good {
+    color: aqua;
+    font-size: 30px;
+}
+
+  
+/*# სიმბოლო გამოიყენება იმისთვის, რომ კონკრეტული id-ს მქონე მონაცემზე ვიმოქმედოთ, და მხოლოდ ის შევცვალოთ*/ 
+
+  

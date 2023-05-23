@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Flex Practice</title>
+        <link rel="icon" href="../images/favicon.avif">
+        <style>
+            div,span {
+                background-color: brown;
+                border: 3px solid black;
+                font-size: 35px;
+                text-align: center;
+            }
+            
+            .inline-block {
+                display: inline-block;
+            }
+            .flexdiv {
+                all: unset;
+                background-color: aqua;
+                display: flex;
+                height: 600px;
+                align-items: flex-start;
+                
+
+                
+            }
+            .flexdiv > * {
+                flex-basis: 90px;
+                flex-grow: 0;
+                box-sizing: border-box;
+                flex-shrink: 0;
+                /* შვილებს როგორ უნდა მოექცეს ამას ვეუბნებით ამ ბრძანებით*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Flex Practice</h1>
+        <p> display flex ბრძანება, მოქმედებს html ელემენტის შინაგან სამყაროზე. მაგრამ თუ გვინდა flex container გარეგან სამყაროზე ვიმოქმედოთ, მაგალითად ორი ასეთი კონტეინერი გვერდი-გვერდ დავაყენოთ, უნდა გამოვიყენოთ inline-flex ბრძანება.</p>
+        <p>FLEX DIRECTION არის ერთ-ერთი ბრძანება, რომელიც კონტეინერის შვილებს ეუბნება ერთმანეთთან მიმართებაში როგორ განლაგდნენ. row, row-reverse, column & column-reverse ღირებულებები აქვს</p>
+        <p>Flex wrap default არის no wrap. მაგრამ თუ გვინდა რომ შვილები, რომლებიც რეალურად ერთ ხაზზე არ ეტევიან თითოეულის ზომის გამო, დავტიოთ ერთ ხაზზე, უნდა გამოვიყენოთ flex wrap property.</p>
+        <p>Flex flow არის ორი ფროფერთის ჯამი flex-direction and flex-wrap. პირველი იწერება flex-direction და მეორე ვრეპი</p>
+        <p>შვილი ელემენტების თანმიმდევრობაზე რომ ვიმოქმედოთ, შვილ ელემენტებს order უნდა გავუწეროთ. სტანდარტულად გაწერილი აქვს 0. ამიტომ -1 იქნება მარცხნივ, 0 შუაში და 1 მარჯვნივ.</p>
+        <p>Justify content მუშაობს ჰორიზონტალურ ღერძზე და დაშორებებს აგვარებს შვილ ელემენტებს შორის. უნდა ჩაიწეროს მშობელი ელემენტის დეკლარაციაში </p>
+        <p> <a href="https://yoksel.github.io/flex-cheatsheet/?fbclid=IwAR3ph3Zb51T35JPqCad4hpnG86POByetOl0de90J2jD-rMTtEauifhMeEEc">Read more about FLEX here. This is documentation</a></p>
+        <p>Align items property არის ვერტიკალურ ღერძზე ელემენტების განლაგების წესი. მშობელ კონტეინერს ვუწერთ და არა შვილებს. მნიშვნელობებია: stretch, flex-start, flex-end, center, baseline, auto</p>
+        <p> თუ გინდა კონტეინერის კონკრეტულ შვილებზე იმოქმედო იგივე მნიშვნელობებით რაც align items გააჩნია, მაშინ უნდა გამოიყენო align-self</p>
+        <p> Align content არის ფროფერთი, რომელიც ელემენტებს შორის დაშორებაზე ზემოქმედებს. flex-start, flex-end, stretch, center, space-bwtween, space-around</p>
+        <p> თუ flex-direction გვაქვს row or row-reverse მაშინ main axis არის ჰორიზონტალური ღერძი. თუ flex-direction გვაქვს column , column-reverse მაშინ main axis არის ვერტიკალური ღერძი</p>
+
+
+        <h3>Flexibility</h3>
+        <p>Flex basis property-ს დახმარებით, მშობელ ელემენტს ვეუბნებით, რომ მისი შვილები იდეალურ შემთხვევაში უნდა იყვნენ კონკრეტული ზომის. </p>
+        <p>Flex grow & flex shrink გვეუბნება, რომ როდესაც შენს კონტეინერს აღარ ექნება საკმარისი ადგილი ყველა ელემენტის მითითებულ ზომაზე დასასმელად, მაშინ როგორ უნდა გაზარდოს ან დააპატარავოს ელემენტები.</p>
+        <p>css property - FLEX აერთიანებს flex grow, flex-shrink  </p>
+        <p>Flex grow სტანდარტული მნიშვნელობა არის 0 ანუ რო გაზარდო ბრაუზერი, ელემენტები არ გაიზრდება. მაგრამ flex shrink სტანდარტული მნიშვნელობა არის 1. რომ დააპატარავო კონტეინერი ყველა ერთნაირად დაპატარავდება. თუ flex shrink-ს ნულზე გადავიყვანთ, ელემენტები არ დაპატარავდება, უბრალოდ გადაიფარება </p>
+
+        <div class="flexdiv">
+        <div style="order:1">1</div>
+        <div>2</div>
+        <div style="flex-grow:3;">3</div>
+        <span style="order:-9">4</span>
+        <span style="order:-2">5</span>
+        <span>6</span>
+        <div class="inline-block">7</div>
+        <div class="inline-block">8</div>
+        <div style="order: 2;" class="inline-block">9</div>
+        </div>
+        
+    </body>
+
+</html>

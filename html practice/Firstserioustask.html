@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>First Project</title>
+        <link rel="icon" href="../images/favicon.avif">
+        <link rel="stylesheet" href="../CSS practice/Affiliate platform/Nomalized.css">
+        <style>
+            
+            #TopBar {
+                background-color: #f2f2f2;
+                position: absolute;
+                width: 1920px;
+                height: 60px;
+                left: 0px;
+                top: 0px;
+                            
+            }
+            #OpeningHours {
+                font-family: 'Inter', sans-serif;
+                color: #1C2752;
+                width: 265px;
+                height: 22px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+            #FullContentTopBar {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 810px;
+
+                position: absolute;
+                width: 1198.86px;
+                height: 22px;
+                left: 361px;
+                right: 360.14;
+                top: 19px;
+            }
+            #socialMedia {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px;
+                width: 123.86px;
+                height: 18.11px;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+
+            }
+            #HeaderDiv {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 423px;
+
+                position: absolute;
+                width: 1199.79px;
+                height: 68px;
+                left: 360px;
+                top: 90px;
+            }
+
+            #LogoDiv {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 10px;
+
+                width: 240.79px;
+                height: 47.5px;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+            #contactContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+                gap: 68px;
+                width: 536px;
+                height: 68px;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+            #MailusDiv {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0px;
+                gap: 11px;
+                width: 242px;
+                height: 68px;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+
+            }
+            #CallusDiv {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0px;
+                gap: 10px;
+                width: 226px;
+                height: 68px;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+
+            }
+           
+            #MailUsIcon {
+                width: 68px;
+                height: 68px;
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+
+            #CallUsIcon {
+                width: 68px;
+                height: 68px;
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+
+
+
+            #MailUsPDiv {
+                width: 71px;
+                height: 25px;
+                font-family: 'Mulish', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 25px;
+                /* identical to box height */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                color: #1C2752;
+            }
+
+            #ExactmailPDiv {
+                width: 163px;
+                height: 22px;
+                font-family: 'Inter', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                /* identical to box height */
+                color: #7E7E7E;
+            }
+
+            #CallUsPDiv {
+                width: 67px;
+                height: 25px;
+                font-family: 'Mulish', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 25px;
+                /* identical to box height */
+                color: #1C2752;
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+
+            #ExactNumDiv {
+                width: 148px;
+                height: 22px;
+                font-family: 'Inter',sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                /* identical to box height */
+                color: #7E7E7E;
+                /* Inside auto layout */
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+
+            #mailusTextDiv {
+                display: flex;
+                flex-direction: column;
+                padding: 0px;
+                gap: 2px;
+                width: 163px;
+                height: 49px;
+                /* Inside auto layout */
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+            
+
+            #CallusTextDiv {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 2px;
+                width: 148px;
+                height: 49px;
+                /* Inside auto layout */
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+            #menuDiv {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 14px;
+                gap: 10px;
+                position: absolute;
+                width: 1199px;
+                height: 93px;
+                left: 361px;
+                top: 197px;
+                background: #FFB342;
+                z-index: 3;
+            
+            }
+
+            #FullMenuContent {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 0px;
+                gap: 220px;
+                width: 1171px;
+                height: 65px;
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+
+            #navMenu ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* optional */
+            list-style: none;
+            }
+
+            #navMenu {
+                position: absolute;
+                width: 700px;
+                height: 24px;
+                left: 0px;
+                top: 20.5px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: #2F2F2F;
+            }
+
+            #navMenu ul li a {
+            text-decoration: none;
+            color: #2F2F2F; 
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            }
+
+
+            #Vector {
+                position: absolute;
+                width: 10px;
+                height: 5px;
+                left: 340px;
+                top: 30.5px;
+            
+            }
+            #ImageButton {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 22px 21px;
+            gap: 10px;
+            width: 251px;
+            height: 65px;
+            background: #1C2752;
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            }
+
+            #BackgroundImageDiv {
+                position: absolute;
+                width: 1920px;
+                height: 924px;
+                left: 0px;
+                top: 224px;
+                z-index: 0;
+            }
+
+            #ContentDiv {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 32px;
+
+                position: absolute;
+                width: 619px;
+                height: 306px;
+                left: 360px;
+                top: 533px;
+                z-index: 3;
+            }
+
+            #BlurBackgroundDiv {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 8px 16px 7px;
+                gap: 10px;
+                width: 500px;
+                height: 45px;
+                background: rgba(255, 255, 255, 0.2);
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+
+            #SmallPDiv {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 9px;
+                width: 468px;
+                height: 29px;
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+
+            #ServicesTextDiv {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 32px;
+                width: 619px;
+                height: 306px;
+                left: 360px;
+                top: 533px;
+            }
+
+            #SmallPDiv>p {
+                width: 429px;
+                height: 22px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: #FFFFFF;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+
+            #HeadingDiv {
+                width: 619px;
+                height: 143px;
+                font-family: 'Mulish';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 60px;
+                line-height: 75px;
+                color: #FFFFFF;
+                /* Inside auto layout */
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+
+            #OurServicesButton {
+                padding: 0px;
+                border: 0px;
+                margin: 0px;
+                border-bottom: 0px;
+                width: 191px;
+                height: 65px;
+            }
+
+            #About {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 60px;
+
+                position: absolute;
+                width: 1200px;
+                height: 546px;
+                left: 360px;
+                top: 1298px;
+
+            }
+
+            #ContentDivFirst {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 20px;
+                width: 600px;
+                height: 263px;
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+
+            #ContentDivSecond {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 40px;
+                width: 534px;
+                height: 197.16px;
+                /* Inside auto layout */
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+
+            #TitleDiv {
+                display: flex;
+                flex-direction: column;
+                align-items:flex-start;
+                padding: 0px;
+                width: 515px;
+                height: 111px;
+                padding-bottom: 0px;
+                /* Inside auto layout */
+            }
+
+            /*#TitleDiv p {
+                width: 515px;
+                height: 56px;
+                font-family: 'Mulish';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 45px;
+                line-height: 56px;
+                color: #1C2752;
+                /* Inside auto layout 
+                flex: none;
+                order: 1;
+                flex-grow: 0; */
+
+            
+
+           /* #WelcomeImage {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 8px 16px 7px;
+                gap: 10px;
+
+                width: 235.48px;
+                height: 45px;
+            } */
+
+            #TitleParagraph {
+                width: 514px;
+                height: 56px;
+                font-family: 'Mulish';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 45px;
+                color: #1C2752;
+                margin: 0;
+                /* Inside auto layout */
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+
+            #LongText {
+                width: 600px;
+                height: 132px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #7E7E7E;
+                /* Inside auto layout */
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+            }
+
+            #AboutList {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                width: 319px;
+                height: 136px;
+            }
+            .List {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                color: #7E7E7E;
+                line-height: 5px;
+                
+            }
+          /*Services*/
+           .Services {
+            position: absolute;
+            width: 1920px;
+            height: 750px;
+            left: 0px;
+            top: 1994px;
+            background: #FFB342;
+           }
+
+           .Services__Content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 40px;
+            position: absolute;
+            width: 1199px;
+            height: 766px;
+            left: 360px;
+            margin-top: 127px;
+            
+           } 
+
+           .Content__Main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 32px;
+            width: 723px;
+            height: 217px;
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+           }
+
+           .Content__Commmertial {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 59px 66px;
+            gap: 10px;
+            width: 1199px;
+            height: 509px;
+            background: #FFFFFF;
+            box-shadow: 0px 20px 38px rgba(216, 216, 216, 0.25);
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+           }
+
+           .Commertial__Group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 60px;
+            width: 1067px;
+            height: 391px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+           }
+
+           .Main__Heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 18px;
+            width: 687px;
+            height: 120px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+           }
+
+           .Main__Buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 30px;
+            width: 723px;
+            height: 65px;
+            flex: none;
+            order: 1;
+            flex-grow: 0; 
+           }
+
+           .Heading__Big {
+            width: 585px;
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 45px;
+            color: #1C2752;
+           }
+           .Heading__Small {
+            width: 687px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+            color: #1C2752;
+            margin-top: 17px;
+            padding: 0px;
+           }
+
+          
+
+           
+        
+
+
+
+
+           
+
+
+        
+
+
+
+        
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+           
+
+            
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+            
+          
+        
+           
+
+
+
+
+
+
+            
+
+
+            
+
+
+        </style>
+    <body>
+        <header>
+            <div id="TopBar">
+                <div id="FullContentTopBar">
+                    <p id="OpeningHours">Opening Hours: 06:00 to 20:00</p>
+                    <div id="socialMedia">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="../images/Insta.svg" alt="Instaicon"></a>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="../images/Fb.svg"  alt="FBicon"></a>
+                        <a href="https://www.twitter.com" target="_blank">
+                            <img src="../images/Twiter.svg" alt="TwitterIcon"></a>
+                        <a href="https://www.pinterest.com">
+                            <img src="../images/Pintrest.svg" alt="PintrestIcon"></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="HeaderDiv">
+                <div id="LogoDiv">
+                    <img src="../images/Logo.svg" alt="Logopart1" width="44px" height="47.5px">
+                    <img src="../images/BlueCollar.svg" alt="Logopart2" width="186.79px" height="47px">
+                </div>
+
+                <div id="contactContainer">
+                    <div id="MailusDiv">
+                        <div id="MailUsIcon">
+                            <img src="../images/mailus.svg" alt="MailUsicon" width="68px" height="68px">
+                        </div>
+                        <div id="mailusTextDiv">
+                            <div  class="MulishFont" id="MailUsPDiv">
+                                <p>Mail Us</p>
+                            </div>
+                            <div class="InterFont" id="ExactmailPDiv">
+                                <p>Info@Example.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="CallusDiv">
+                        
+                        <div id="CallUsIcon">
+                            <img src="../images/callus.svg" alt="CallUsicon"width="68px" height="68px">
+                        </div>
+                        <div id="CallusTextDiv">
+                            <div id="CallUsPDiv">
+                                <p>Call Us</p>
+                            </div>
+                            <div id="ExactNumDiv">
+                                <p>+01 569 896 654</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+
+        <main>
+            <div id="menuDiv">
+                <div id="FullMenuContent">
+                    <nav id="navMenu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <img id="Vector" src="../images/Vector.svg">
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    </nav>
+                <button id="ImageButton">
+                    <img src="../images/Button (1).svg" alt="button">
+
+                </button>
+
+
+                </div>
+                
+            </div>
+
+
+
+
+
+
+            <div id="BannerDiv">
+                <div id="ContentDiv">
+                    <div id="ServicesTextDiv">
+                    <div id="BlurBackgroundDiv">
+                        <div id="SmallPDiv">
+                            <img src="../images/engineVector.svg" alt="EngineSVG">
+                            <p>We Provide Electric Services For Industrial Project</p>
+                        </div>
+                    </div>
+
+                        <div id="HeadingDiv">We Are Professional Quality Services</div>
+                    </div>
+
+                    <button id="OurServicesButton">
+                        <img src="../images/Button (2).svg" alt="Ourservicesbutton">
+
+                    </button>
+
+                </div>
+
+                <div id="BackgroundImageDiv">
+                    <img src="../images/Image.svg" alt="BackgroundImage">
+                </div>
+
+            </div>
+
+
+
+
+            <div id="About">
+                <img src="../images/Image (1).svg" alt="AboutUSimage">
+                <div id="AboutContent">
+                    <div id="ContenDivFirst">
+                        <div id="TitleDiv">
+                            <div id="FirstTitle">
+                                <img id="WelcomeImage" src="../images/Sub Text.svg" alt="WelcomeImage">
+                            </div>
+                            <p id="TitleParagraph">We Provide Your Future</p>
+                        </div>
+                        <p id="LongText">Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin pretium id urna sit amet tincidunt. Interdum et malesuada.<br><br>In pulvinar viverra diam, nec rutrum mauris maximus non. Aenean sed quam tristique, facilisis est ac, interdum velit.</p>
+                    </div>
+                    <div id="ContentDivSecond">
+                        <img id="ExperienceImage" alt="ExperienceImage" src="../images/Experiance.svg">
+                        <div id="AboutList">
+                            <p class="List Shortest">- Sed varius ipsum lacus</p>
+                            <p class="List SecondToLongest">- Pulvinar tortor dignissim sit amet.</p>
+                            <p class="List Longest">- Quisque tristique diam quis placerat</p>
+                            <p class="List SecondToShortest">- Aliquam id ante suscipi fringilla.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!--Services-->
+            <div class="Services">
+                <div class="Services__Content">
+                    <div class="Content__Main">
+                        <div class="Main__Heading">
+                            <p class="Heading__Big">Professional Main Services</p>
+                            <p class="Heading__Small">Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin pretium id urna sit amet tincidunt.</p>
+                        </div>
+                        <div class="Main__Buttons">
+                            <button>
+                                <img class="Button" src="../images/Commercial.svg" alt="CommertialIMG">
+                            </button>
+                            <button>
+                                <img class="Button--Invisible"src="../images/Residental.svg" alt="ResidentialIMG">
+                            </button>
+                            <button>
+                                <img class="Button--Invisible"src="../images/Industri.svg" alt="IndustrialImg">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="Content__Commmertial">
+                        <div class="Commertial__Content">
+                            <div class="Commertial__Group">
+                                <div class="Group__Big">
+                                    <img src="../images/Sub Text (1).svg" alt="SubTextImg">
+                                    <div class="Big__Texts">
+                                        <p>Commercial</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do incididunt ut labore et dolore magna aliqua. Ut enim ad minimquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                                            commodo consequat.
+                                            <br>
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.ullamco laboris nisi ut aliquip ex ea 
+                                            commodo consequat.
+                                        </p>
+                                    </div>
+                                </div>
+                                <button>
+                                    <img src="../images/Button (3).svg" alt="Button3">
+                                </button>
+                            </div>
+                            <img src="../images/Image (3).svg" alt="ResidentialImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+              
+            
+
+
+            
+        </main>
+    </body>
+
+
+
+      
+</html>

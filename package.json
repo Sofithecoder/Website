@@ -1,0 +1,15 @@
+{
+  "name": "novatori.ge",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "novatori website unique student system management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "is-odd": "^3.0.1"
+  }
+}

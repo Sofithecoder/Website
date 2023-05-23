@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Selectors practice</title>
+        <link rel="icon" href="../images/favicon.avif">
+
+        <style>
+            h2 {
+                color: brown;
+            }
+
+            .RedButton {
+                background-color: rgb(150, 33, 33);
+            }
+
+            .GreenButton {
+                background-color: green;
+            }
+
+            .BigButton {
+                width: 100px;
+                height: 70px;
+            }
+            
+            a[target=_blank] {
+                color: brown;
+                
+            }
+
+            input[type=submit] {
+                border-radius: 50px;
+
+            }
+            a[href*="novatori.ge"] {
+                color: rgb(63, 188, 138);
+            }
+            
+            a[href$=".com"] {
+                color: blueviolet;
+                
+            }
+            a[href*="novatori.ge"],p, h2, h3 {
+                background-color: rgb(255, 255, 255);
+            }
+
+            .RedButton,.GreenButton {
+                font-size: 50px;
+            }
+
+            div> span {
+                background-color: aquamarine;
+            }
+            p.love {
+                background-color: chartreuse;
+            }
+
+            p+span {
+                color: blueviolet;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>How do HTML selectors work?</h1>
+        <img src="../images/04.png" width="400">
+        <h2>1.Universal selector AKA * </h2>
+        <p>Selector * can style the <span>whole document.</span> No matter what kind of elements you have in the document, * affects each of them</p>
+        <span>love you bitch</span>
+        <h2>2.Type selectors</h2>
+        
+        <br>
+        <span>Love you too</span>
+        <p>Type selectors are h1, h2, p and etc. they affect the whole type. if you style one P each paragraphs will be styled in the document</p>
+        <h2>3. ID selectors</h2>
+        <p class="love">ID selectors <span>style one</span> specific element with a unique ID</p>
+        <h2>4. Class selectors</h2>
+        <p> Class selectors <span>can group</span> elements into classes and affect only those with a specific class. ID can effect only one element whereas class can affect several. aditionally, one element can only have one ID but one element can have multiple classes. in order to style a class selector you should add "." in front of the selector in style tag</p>
+        <h2>5. Atribute selector</h2>
+        <p class="love">If you want to style elements depending on whether they have a specific atribute or not you should use atribute selector. If the atribute exists HTML wikl style it, if not- not. </p>
+        <h2>6.Descentent Combinator</h2>
+        <p> This describes a relationship between the mother elements and it's decentents. If we style "div span" element this means that all descendents of the div will be styled. See the example below. But if you write ">" in the css rule, only actual child will be styled.</p>
+        <div>
+            This is a div's <span>child</span>
+            <P>This is a div's <span>cousin</span></P>
+        </div>
+        <p> But if we use > in the style tag. we will be able to style only direct children, not cousins</p>
+        <h2>Sibling Combinator</h2>
+        <p>There are two types of sibling combinators-general & adjecent. ~ means every neigbhour that is down, + means nearest down neigbhour</p>
+
+
+
+        <h3>Class selector example</h3>
+        <p> If you want to give more than one values to class atribute you should just write class = "value1 (space) value2"</p>
+        <form>
+            <input type="submit" class="GreenButton"  value="Send">
+            <input type="submit" class="GreenButton BigButton" value="Register">
+            <input type="button" class="RedButton"  value="Cancel">
+            <input type="button" class="GreenButton" value="Buy">
+            <input type="submit" class="RedButton" value="Exit">
+        </form>
+
+        <h3>Stying atribute selectors with examples</h3>
+        <div>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <!--Facebook გაწითლდა, იმიტომ რომ target attribute აქვს-->
+            <a href="https://google.com" target="_parent">Google</a>
+            <a href="https://apple.com">Apple</a>
+            <a href="https://novatori.ge">Novatori</a>
+            <!-- novatori.ge მწვანედ იმიტომ გადაისტილა, რომ ტოლობის წინ css ში დავწერე ფიფქი. რადგან იმ სიტყვას შეიცავს ლინკი, რომელიც მე მიწერია, ამიტომ გადაისტილა-->
+            <a href="../html practice/backgrouund.html"> Background HTML file</a>
+
+        </div>
+    </body>
+</html>

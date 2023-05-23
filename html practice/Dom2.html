@@ -1,0 +1,36 @@
+<div class="container">
+<p class="sityva">I love you</p>
+<div class="container">
+    <p> I hate you</p>
+    <p class="sityva">I admire you</p>
+</div>
+</div>
+<script>
+    const box = document.querySelector('.container') // დააბრუნებს პირველ ელემენტს, რომელსაც აქვს კონტეინერის კლასი
+    console.log(box)
+
+    // აი ამით ვზემოქმედებ მე დივზე კონტეინერ კლასით
+
+    // ახლა დავაბრუნოთ ყველა კლასის სია, რაც გამოვიყენეთ
+
+    console.log(box.classList);
+    box.classList.add('--active') // ახალი კლასის მიმატება კონტეინერზე
+    box.classList.remove('--active') // დარჩება ისევ კონტეინერი
+    box.classList.toggle('--kutu') // თუ აქვს ეს კლასი შლის, თუ არაქ, ამატებს
+    // შეგილია საერთოდ სახელი შეუცვალო კონტეინერ კლასს - 
+    box.className = 'vau ramagaria shevcvale'
+
+
+    // html ის შიგთავსის შეცვლა
+    box.innerHTML = '<span>სალამი ბოზო</span>'// დივის კონტენტს შეცვლის
+    //box.remove() // ელემენტს(div-ს) საერთოდ წაშლის ბრაუზერიდან
+
+
+    // ელემენტის CSS მართვა
+
+    box.style.marginBottom = '10px' // ზოგადად-margin-bottom
+    box.style.padding = '40px'
+    box.style.backgroundColor ='red'
+
+    // ზოგადად იწერება background-color მაგრამ ტირის ნაცვლად დიდი ასოთი უნდა შეცვალო მეორე სიტყვა
+</script>
